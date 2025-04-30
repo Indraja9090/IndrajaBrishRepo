@@ -1,6 +1,9 @@
 /* telling Babel how to transform your modern JavaScript so that it works in a specific JavaScript runtime environment — in this case, your current version of Node.js.*/
 module.exports = {
-    presets: [['@babel/preset-env', {targets: {node: 'current'}}]],
+    presets: [
+        ['@babel/preset-env', {targets: {node: 'current'}}],
+        '@babel/preset-typescript'
+    ],
 };
 
 /* conditionally load presets and plugins in your Babel configuration based on the environment.*/
