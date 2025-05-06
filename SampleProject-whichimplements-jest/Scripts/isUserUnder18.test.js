@@ -7,6 +7,7 @@ test('filters out users below age 18', () => {
     { name: 'Gita', age: 15 },
     { name: 'Mohan', age: 19 }
   ];
+  console.log(users[1].name);
   const result = filterAdults(users);
   expect(result).toEqual([
     { name: 'Sita', age: 22 },
