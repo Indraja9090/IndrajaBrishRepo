@@ -1,24 +1,23 @@
-/* ---- include these two debug functions and verify their outputs on the command line----*/
+/* ------ use RTL's "fireEvent" and "waitFor" functions to simulate interactions of an end user ------*/
+// If a user types into an input field, the component may re-render , and 
+// the new value should be displayed (or used somewhere).
 import * as React from 'react';
-import { render, screen } from '@testing-library/react';
-
+import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
-describe('App', () => {
-  it('renders App component', async () => {
-    render(<App />);
+// If your component is involved in an asynchronous task, 
+// you may see the  warning showing up: "Warning: An update to App inside a test was not wrapped in act(...).
 
-    expect(screen.queryByText(/Signed in as/)).toBeNull();
+describe('App', () => {
+  it('renders App component', () => {
+    render(<App />);
 
     screen.debug();
 
-    expect(await screen.findByText(/Signed in as/)).toBeInTheDocument();
+    fireEvent.change(screen.getByRole('textbox'), {
+      target: { value: 'JavaScript' },
+    });
 
     screen.debug();
   });
 });
-/*
-NOTE:
-For any element that isn't there yet but will be there eventually, use findBy over getBy or queryBy. 
-If you assert for a missing element, use queryBy. Otherwise default to getBy.
-*/
