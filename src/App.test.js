@@ -1,13 +1,19 @@
-/*-------------- getByRole() mainly DOM elements ni provide chesins accessible roles base chesi find cheyyadaniki. Idi accessibility standards ni follow chestundi 
-                role should be (string): Ikkada role ante HTML element yokka semantic role. For example:"button","textbox","heading","link","checkbox","radio"-----*/
+/*----Following sampel code is taken from article https://www.robinwieruch.de/react-testing-library/ -----*/
+
+// This doesn't work, because, even though debug output shows that the element with the text "Searches for JavaScript" isn't there,
+// "getBy" search varient throws an error before we can make the assertion, because it cannot find the element with this text. 
+// In order to assert elements which aren't there, we can exchange "getBy" with "queryBy" search varient.
+
+import * as React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
+describe('App', () => {
+  it('renders App component', () => {
+    render(<App />);
 
-  expect(screen.getByText(/learn react/i)).toBeInTheDocument();
-
-  screen.getByRole('img'); 
-
+    screen.debug();
+    //fails
+    expect(screen.getByText(/Searches for JavaScript/)).toBeNull();
+  });
 });

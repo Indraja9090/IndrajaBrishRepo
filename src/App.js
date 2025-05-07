@@ -1,24 +1,37 @@
-/*----follwing is the Pre-existing code which comes with "npx create-react-app <project-name>" create React project command ----*/
-import logo from './logo.svg';
-import './App.css';
+/*----Following sampel code is taken from article https://www.robinwieruch.de/react-testing-library/ -----*/
+
+// React Testing Library doesn't care much about the actual components. 
+// Let's take the following React components which utilize different React features (useState, event handler, props) and concepts (controlled component):
+import * as React from 'react';
 
 function App() {
+  const [search, setSearch] = React.useState('');
+
+  function handleChange(event) {
+    setSearch(event.target.value);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Search value={search} onChange={handleChange}>
+        Search:
+      </Search>
+
+      <p>Searches for {search ? search : '...'}</p>
+    </div>
+  );
+}
+
+function Search({ value, onChange, children }) {
+  return (
+    <div>
+      <label htmlFor="search">{children}</label>
+      <input
+        id="search"
+        type="text"
+        value={value}
+        onChange={onChange}
+      />
     </div>
   );
 }
