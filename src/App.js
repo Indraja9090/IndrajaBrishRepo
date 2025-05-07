@@ -1,3 +1,4 @@
+/*----follwing is the Pre-existing code which comes with "npx create-react-app <project-name>" create React project command ----*/
 import logo from './logo.svg';
 import './App.css';
 
