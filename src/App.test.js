@@ -1,6 +1,4 @@
-/* ---- Changes made to above code to explain "FindBy" search varient ----- */
-// After its initial render, we assert that the "Signed in as" text is not there by using the queryBy instead of the getBy search variant.
-// Then we await the new element to be found, and it will be found eventually when the promise resolves and the component re-renders again.
+/* ---- include these two debug functions and verify their outputs on the command line----*/
 import * as React from 'react';
 import { render, screen } from '@testing-library/react';
 
@@ -12,6 +10,15 @@ describe('App', () => {
 
     expect(screen.queryByText(/Signed in as/)).toBeNull();
 
+    screen.debug();
+
     expect(await screen.findByText(/Signed in as/)).toBeInTheDocument();
+
+    screen.debug();
   });
 });
+/*
+NOTE:
+For any element that isn't there yet but will be there eventually, use findBy over getBy or queryBy. 
+If you assert for a missing element, use queryBy. Otherwise default to getBy.
+*/
