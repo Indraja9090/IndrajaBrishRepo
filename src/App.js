@@ -1,11 +1,27 @@
-/*----Following sampel code is taken from article https://www.robinwieruch.de/react-testing-library/ -----*/
+/* --------Changes made to the code to make Suitable Scenario to explain "findBy" search varient of React testing Library ----*/
 
-// React Testing Library doesn't care much about the actual components. 
-// Let's take the following React components which utilize different React features (useState, event handler, props) and concepts (controlled component):
+/* Code Explanation :  
+After its initial render, the App component fetches a user from a simulated API. 
+The API returns a JavaScript promise which immediately resolves with a user object, and
+the component stores the user from the promise in the component's state. 
+The component updates and re-renders; and afterward the conditional rendering should render "Signed in as" after the component update:*/
 import * as React from 'react';
 
+const getUser = () => {
+  return Promise.resolve({ id: '1', name: 'Robin' });
+};
 function App() {
   const [search, setSearch] = React.useState('');
+  const [user, setUser] = React.useState(null);
+
+  React.useEffect(() => {
+    const loadUser = async () => {
+      const user = await getUser();
+      setUser(user);
+    };
+
+    loadUser();
+  }, []);
 
   function handleChange(event) {
     setSearch(event.target.value);
@@ -13,6 +29,8 @@ function App() {
 
   return (
     <div>
+      {user ? <p>Signed in as {user.name}</p> : null} 
+
       <Search value={search} onChange={handleChange}>
         Search:
       </Search>
