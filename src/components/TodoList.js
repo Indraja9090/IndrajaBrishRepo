@@ -6,6 +6,7 @@ function TodoList() {
   const [todos, setTodos] = useState([]);
   const [filter, setFilter] = useState('all');
 
+// Function that creates a new todo item and updates the state.
   const addTodo = (text) => {
     const newTodo = {
       id: Date.now(),
@@ -35,6 +36,7 @@ function TodoList() {
 
   return (
     <div className="todo-list">
+      {/* binds (or passes) the addTodo function as a prop to the AddTodo component, to allow child-to-parent communication. */}
       <AddTodo addTodo={addTodo} />
       <ul>
         {filteredTodos.map((todo) => (

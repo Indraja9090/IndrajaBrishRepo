@@ -4,11 +4,12 @@ This test will check if the component renders correctly and if the increment and
 */
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { Counter } from './../Counter.js';
+import  Counter  from '../components/Counter.js';
 describe('Counter Component', () => {
     // First Test Case
     test('renders initial count of 0', () => {
         render(<Counter />);
+        screen.debug();
         const countElement = screen.getByText(/Counter: 0/i);
         expect(countElement).toBeInTheDocument();
     });

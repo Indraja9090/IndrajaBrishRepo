@@ -125,8 +125,8 @@ The component updates and re-renders; and afterward the conditional rendering sh
 
 /*---------------Code Taken from https://keploy.io/blog/community/a-guide-to-testing-react-components-with-jest-and-react-testing-library#let-s-start-writing-testcases -----*/
 import React from 'react';
-import TodoList from './TodoList';
-import Counter from './Counter';
+import TodoList from './components/TodoList';
+import Counter from './components/Counter';
 function App() {
   return (
     <div className="app-container">

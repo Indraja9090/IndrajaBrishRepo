@@ -1,12 +1,13 @@
 // This test file contains four test cases for a TodoList component. 
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import TodoList from './TodoList.js';
+import TodoList from '../components/TodoList.js';
 //ఈ టెస్ట్‌ కేవలం TodoList అనే component లో కొత్త టుడో (todo item) సరిగా జోడవుతుందా లేదా అన్నదాన్ని పరీక్షిస్తుంది.
 describe('TodoList Component',() => {
     test('adds a new todo', () => {
         // 👉 TodoList అనే component‌ను virtual DOM లో render చేస్తుంది, అంటే actual browser లో కాకుండా simulate చేసిన DOM లో.
         render(<TodoList />);
+        screen.debug();
     
         // 👉 టెస్టు చేయాలంటే form elements ను locate చేయాలి.
         // input ని placeholder ఆధారంగా కనుగొంటుంది.
