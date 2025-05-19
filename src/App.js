@@ -129,6 +129,7 @@ import TodoList from './components/TodoList';
 import Counter from './components/Counter';
 // import ClassCounterOne from './components/LifecycleHooks';
 import HookCounterOne from './components/useEffect'
+import UserList from './components/useEffect-API-Fetching';
 function App() {
   return (
     <div className="app-container">
@@ -137,6 +138,7 @@ function App() {
       <Counter/>
       {/* <ClassCounterOne/> */}
       <HookCounterOne/>
+      <UserList/>
     </div>
   );
 }
