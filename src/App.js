@@ -127,12 +127,16 @@ The component updates and re-renders; and afterward the conditional rendering sh
 import React from 'react';
 import TodoList from './components/TodoList';
 import Counter from './components/Counter';
+// import ClassCounterOne from './components/LifecycleHooks';
+import HookCounterOne from './components/useEffect'
 function App() {
   return (
     <div className="app-container">
       <h1>Todo App</h1>
       <TodoList />
       <Counter/>
+      {/* <ClassCounterOne/> */}
+      <HookCounterOne/>
     </div>
   );
 }
