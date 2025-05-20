@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+//App.test.js.snap
+exports[`App Snapshot renders App component with AadharProfile correctly 1`] = `null`;
