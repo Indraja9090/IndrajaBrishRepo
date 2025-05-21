@@ -7,7 +7,7 @@ describe('TodoList Component',() => {
     test('adds a new todo', () => {
         // 👉 TodoList అనే component‌ను virtual DOM లో render చేస్తుంది, అంటే actual browser లో కాకుండా simulate చేసిన DOM లో.
         render(<TodoList />);
-        screen.debug();
+        // screen.debug();
     
         // 👉 టెస్టు చేయాలంటే form elements ను locate చేయాలి.
         // input ని placeholder ఆధారంగా కనుగొంటుంది.

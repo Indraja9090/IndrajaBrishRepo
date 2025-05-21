@@ -4,7 +4,7 @@ import FilterTodos from './FilterTodos';
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
-  console.log(todos) //intial log - empty array
+  // console.log(todos) //intial log - empty array
                       // when 1st time user type in input textbox it logs - [{id: 1747317559725, text: 'indraja', completed: false}]
                       // when 2nd time user type in input textbox it logs - [{id: 1747317559725, text: 'indraja', completed: false}, 
                       //                                                      {id: 1747318256807, text: 'eswari', completed: false}]
@@ -25,7 +25,7 @@ function TodoList() {
     // React’s useState hook replaces the old state with the new value when you call setTodos().
     //On the next render, React gives you updated todos array — not the old empty one.
     setTodos([...todos, newTodo]);
-    console.log(todos); // due to sync, it logs empty array intially when user type text in input textbox
+    // console.log(todos); // due to sync, it logs empty array intially when user type text in input textbox
                         // logs [{id: 1747317559725, text: 'indraja', completed: false}] when 2nd time user type text in input box
   };
 
@@ -49,7 +49,7 @@ function TodoList() {
   //.filter() is an array method that helps you create a new array by keeping only the items that match a condition.
   // If the array is empty, there’s nothing to check, so it just returns another empty array.
   const filteredTodos = todos.filter((todo) => {
-    console.log(todos); // when user type in input textbox it logs - [{id: 1747317559725, text: 'indraja', completed: false}]
+    // console.log(todos); // when user type in input textbox it logs - [{id: 1747317559725, text: 'indraja', completed: false}]
                         // when 2nd time user type in input textbox it logs - array with 2 objects [{id: 1747317559725, text: 'indraja', completed: false}, 
                         //                                                                          {id: 1747318256807, text: 'eswari', completed: false}]
                         // when 3rd time user select the input checkbox it logs - array with 2 objects [{id: 1747317559725, text: 'indraja', completed: true},
@@ -61,7 +61,7 @@ function TodoList() {
     if (filter === 'completed') return todo.completed;
     return true; //  When filter = 'all', So for each `todo` object, return true is called → it includes all todos.
   });
-  console.log(filteredTodos); // initial render - empty array
+  // console.log(filteredTodos); // initial render - empty array
                               // when user type in input textbox it logs - [{id: 1747317559725, text: 'indraja', completed: false}]
                               // when 2nd time user type in input textbox it logs - [{id: 1747317559725, text: 'indraja', completed: false},
                               //                                                     {id: 1747318256807, text: 'eswari', completed: false}]
