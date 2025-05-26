@@ -3,6 +3,9 @@
         { "id": 1, "name": "Indraja" },
         { "id": 2, "name": "Praveen" },
         { "id": 3, "name": "Lakshmi" }
-    ]
+    ],
+    "posts": [
+    { "id": 1, "title": "Hello JSON Server", "author": "Indraja" }
+  ]
 }
   

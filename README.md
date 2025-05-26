@@ -1,3 +1,16 @@
+Developer NOTE:
+### `npm install -g json-server`
+json-server is a popular tool for setting up a full fake REST API with zero coding, useful for prototyping or front-end development.
+
+## Create a `db.json` file - This file will act as your fake database. Create a file named db.json:
+Once started, you can access endpoints like:
+http://localhost:3000/users
+http://localhost:3000/posts
+
+### `json-server --watch db.json --port 3000`
+Start the json-server
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
