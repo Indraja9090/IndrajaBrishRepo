@@ -35,7 +35,6 @@ function LoginForm() {
         console.log(data)
         const lastId = data.length > 0 ? data[data.length - 1].id : 0;
         const newUser = { id: lastId + 1, ...values };
-
         const response = await fetch('http://localhost:3001/users', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
