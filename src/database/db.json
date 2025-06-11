@@ -1,11 +1,3 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "name": "Srikanth Meruva",
-      "aadharNumber": "454554123651",
-      "phone": "7729882945",
-      "address": "Jamal Abdhul Naseer Street\nJamal Building, 409"
-    }
-  ]
+  "users": [  ]
 }

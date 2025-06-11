@@ -15,6 +15,10 @@
     "web-vitals": "^2.1.4",
     "yup": "^1.6.1"
   },
+  "jest": {
+    "transformIgnorePatterns": ["node_modules/(?!axios)/"]
+  },
+  "type": "module",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -39,4 +43,4 @@
       "last 1 safari version"
     ]
   }
-}
+} 

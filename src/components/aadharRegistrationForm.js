@@ -26,13 +26,14 @@ function AadharForm() {
     try {
         // Fetch existing records
         const getResponse = await axios.get('http://localhost:3001/users');
-        console.log('promise object sent by axios get request', getResponse)
+        console.log('promise object sent by axios get request:', getResponse)
         const data = getResponse.data;
-        // Create new object with id and all form values.
+        // //Create new object with id and all form values.
         const lastId = data.length > 0 ? data[data.length - 1].id : 0;
         const newEntry = { id: lastId + 1, ...values };
         // Post the new entry
         const postResponse  = await axios.post('http://localhost:3001/users', newEntry);
+        console.log('Post axios promise', postResponse)
         alert('Aadhar Registered Successfully!');
         resetForm();
         console.log('Saved:', postResponse.data);
@@ -48,19 +49,19 @@ function AadharForm() {
       <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
         <Form>
           <label htmlFor="name">Name</label>
-          <Field name="name" type="text" />
+          <Field name="name" id="name" type="text" />
           <ErrorMessage name="name" component="div" className="error" />
 
           <label htmlFor="aadharNumber">Aadhar Number</label>
-          <Field name="aadharNumber" type="text" />
+          <Field name="aadharNumber" id="aadharNumber" type="text" />
           <ErrorMessage name="aadharNumber" component="div" className="error" />
 
           <label htmlFor="phone">Phone Number</label>
-          <Field name="phone" type="text" />
+          <Field name="phone" id="phone" type="text" />
           <ErrorMessage name="phone" component="div" className="error" />
 
           <label htmlFor="address">Address</label>
-          <Field name="address" as="textarea" />
+          <Field name="address" id="address" as="textarea" />
           <ErrorMessage name="address" component="div" className="error" />
 
           <button type="submit">Submit</button>

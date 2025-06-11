@@ -1,6 +1,6 @@
 // import LoginPage from './components/loginPage';
 // import LoginForm from './components/loginForm';
-import AadharForm from './components/aadharRegistrationForm';
+import AadharForm from './components/aadharRegistrationForm.js';
 
 function App() {
   return (

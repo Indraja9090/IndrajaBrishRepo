@@ -7,7 +7,7 @@
   background: #f9f9f9;
 }
 
-label {
+h1, label {
   display: block;
   margin-top: 10px;
   font-weight: bold;
