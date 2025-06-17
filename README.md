@@ -1,14 +1,10 @@
 Developer NOTE:
 
-### `npm install -g json-server` and `json-server --watch db.json --port 3001`
- 
-installed `json-server` API and, created and made `db.json` file as Database. Use port 3001 to avoid conflict with React app default localhost port 3000
+### `npm install @reduxjs/toolkit`
+For Redux logic and setup. The core redux library included with RTK.
 
-### `npm install -g axios`
-
-axios is a promise-based HTTP client for JavaScript. It's commonly used to send HTTP requests (GET, POST, PUT, DELETE, etc.) from the browsers (like in React apps) or Node.js server.
-
-### `npm install -g yup`
+### `npm install react-redux`
+To connect Redux with React
 
 Important NOTE: 
 
