@@ -9,7 +9,32 @@ Core redux library - a standalone state management tool, not specific to any UI 
 ### `npm install react-redux`
 Since the redux package is not tied specifically to React, the react-redux package provides the necessary bindings to integrate Redux with React components easily.
 
-Important NOTE: 
+### `npm install @mui/material @mui/icons-material redux react-redux @reduxjs/toolkit faker json-server axios`
+
+# In package.json, add a script:
+"scripts": {
+  "start": "react-scripts start",
+  "server": "json-server --watch db.json --port 5000"
+}
+
+### `npm run server`
+# When you run it in terminal:
+JSON Server started on PORT :5000
+Press CTRL-C to stop
+Watching db.json...
+
+(˶ᵔ ᵕ ᵔ˶)
+
+Index:
+http://localhost:5000/
+
+Static files:
+Serving ./public directory if it exists
+
+Endpoints:
+http://localhost:5000/customers
+http://localhost:5000/policies
+http://localhost:5000/claims
 
 # Getting Started with Create React App
 
