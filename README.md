@@ -3,8 +3,11 @@ Developer NOTE:
 ### `npm install @reduxjs/toolkit`
 For Redux logic and setup. The core redux library included with RTK.
 
+### `npm install redux`
+Core redux library - a standalone state management tool, not specific to any UI library (React, Angular, Vue, etc.). 
+
 ### `npm install react-redux`
-To connect Redux with React
+Since the redux package is not tied specifically to React, the react-redux package provides the necessary bindings to integrate Redux with React components easily.
 
 Important NOTE: 
 

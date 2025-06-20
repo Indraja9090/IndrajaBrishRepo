@@ -1,8 +1,9 @@
-
+import './App.css'
+import CakeContainer from './components/cakeContainer';
 function App() {
   return (
-    <div>
-      
+    <div className='App'>
+      <CakeContainer />      
     </div>
   );
 }
