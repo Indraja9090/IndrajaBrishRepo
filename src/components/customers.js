@@ -127,10 +127,10 @@ const Customers = () => {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>Name</TableCell>
-                <TableCell>Email</TableCell>
-                <TableCell>Phone</TableCell>
-                <TableCell>City</TableCell>
+                <TableCell sx={{ fontWeight: 'bold', fontSize: '1.3rem' }}>Name</TableCell>
+                <TableCell sx={{ fontWeight: 'bold', fontSize: '1.3rem' }}>Email</TableCell>
+                <TableCell sx={{ fontWeight: 'bold', fontSize: '1.3rem' }}>Phone</TableCell>
+                <TableCell sx={{ fontWeight: 'bold', fontSize: '1.3rem' }}>City</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>

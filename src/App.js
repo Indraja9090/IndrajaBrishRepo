@@ -36,15 +36,27 @@ import Customers from './components/customers';
 import Policies from './components/policies';
 import Claims from './components/claims';
 
+const activeStyle = {
+  backgroundColor: '#ffffffaa',
+  fontWeight: 'bold',
+  color: 'black'
+};
+
 function App() {
   return (
     <Router>
       <AppBar position="static">
         <Toolbar>
           <Box sx={{ flexGrow: 1 }}></Box>
-          <Button component={NavLink} to="/customers" color="inherit">Customers</Button>
-          <Button component={NavLink} to="/policies" color="inherit">Policies</Button>
-          <Button component={NavLink} to="/claims" color="inherit">Claims</Button>
+          <Button component={NavLink} to="/customers" 
+                  color="inherit"
+                  style={({ isActive }) => (isActive ? activeStyle : undefined)}>Customers</Button>
+          <Button component={NavLink} to="/policies" 
+                  color="inherit"
+                  style={({ isActive }) => (isActive ? activeStyle : undefined)}>Policies</Button>
+          <Button component={NavLink} to="/claims" 
+                  color="inherit"
+                  style={({ isActive }) => (isActive ? activeStyle : undefined)}>Claims</Button>
         </Toolbar>
       </AppBar>
       <Box p={2}>
